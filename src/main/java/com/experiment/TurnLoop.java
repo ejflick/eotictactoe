@@ -1,6 +1,6 @@
 package com.experiment;
 
-final public class TurnLoop {
+public final class TurnLoop {
 
   private TurnLoopStep[] steps;
   private int nextStep = 0;

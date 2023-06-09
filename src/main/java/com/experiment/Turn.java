@@ -1,25 +1,24 @@
 package com.experiment;
 
-public class Turn {
+public interface Turn {
 
-  private Turn previous;
-  private String player;
-  private int row;
-  private int column;
+  void take();
 
-  public Turn(Turn previous, String player, int row, int column) {
-    this.previous = previous;
-    this.player = player;
-    this.row = row;
-    this.column = column;
+  Board board();
+
+  public final class Empty implements Turn {
+    public Empty() {}
+
+    @Override
+    public void take() {
+      throw new UnsupportedOperationException("Unimplemented method 'take'");
+    }
+
+    @Override
+    public Board board() {
+      return new EmptyBoard();
+    }
+
   }
 
-  public void take() {
-
-  }
-
-  public Board board() {
-
-  }
-  
 }

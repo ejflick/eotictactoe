@@ -1,25 +1,24 @@
 package com.experiment;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
-final public class Turns {
+public final class Turns {
 
   private final TurnLoop turnLoop;
-  private final LinkedList<Turn> turns;
+  private final ArrayList<Turn> turns;
   
   public Turns() {
-    this.turns    = new LinkedList<>();
+    this.turns = new ArrayList<>(new Turn.Empty());
     this.turnLoop = new TurnLoop();
   }
 
   public void takeTurn(String player, int row, int column) {
-    turns.addFirst(
-      new Turn(turns, player, row, column)
-    );
+
   }
 
   public void takeUntilEnd() {
-
     turnLoop.run();
   }
 

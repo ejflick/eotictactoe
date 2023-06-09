@@ -1,6 +1,6 @@
 package com.experiment;
 
-final public class EmptyBoard implements Board {
+public final class EmptyBoard implements Board {
 
   public EmptyBoard() {}
 

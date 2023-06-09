@@ -1,6 +1,6 @@
 package com.experiment;
 
-final public class Game {
+public final class Game {
 
   private final Turns turns;
 
